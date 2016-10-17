@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Square suelo;
+    private Person queco;
 
     /**
      * Constructor for objects of class Picture
@@ -62,6 +63,11 @@ public class Picture
         suelo.changeSize(500);
         suelo.moveVertical(125);
         suelo.moveHorizontal(-310);
+        
+        queco = new Person();
+        queco.makeVisible();
+        queco.moveHorizontal(-200);
+        queco.moveVertical(13);
     }
 
     /**
@@ -104,5 +110,13 @@ public class Picture
         roof.changeColor("black");
         window.makeVisible();
         suelo.changeColor("black");
+    }
+    
+    /**
+     * La persona va hacia la casa
+     */
+    public void quecoAnda()
+    {
+        queco.slowMoveHorizontal(100);
     }
 }
